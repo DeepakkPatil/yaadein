@@ -1,14 +1,35 @@
 import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
-import React from 'react'
+import { Link , useNavigate, useLocation} from 'react-router-dom'
+import React,{useEffect, useState} from 'react'
+import { useDispatch } from 'react-redux'
+
 import useStyles from './styles'
 import memories from '../../images/memories.png';
 
 const Navbar = () => {
 
       const classes = useStyles();
-      const user= null ;
-  return (
+      const [user,setUser]= useState(JSON.parse(localStorage.getItem('profile'))) ;
+      const dispatch=useDispatch() ;
+      const history = useNavigate() ;
+    const location = useLocation() ;
+          console.log(user) ;
+      const logout=()=>{
+
+        dispatch({ type:'LOGOUT'}) ;
+        history('/') ;
+        setUser(null) ;
+      }
+
+      useEffect(() => {
+        
+        const token =user?.token ;
+         // JWT ..
+
+         setUser(JSON.parse(localStorage.getItem('profile')))
+      }, [location]) // because if the location or url changes then user must be fetched and ui must be rendered
+      
+     return (
     <div>
         
         <AppBar className={classes.appBar} position="static" color="inherit">
@@ -26,7 +47,7 @@ const Navbar = () => {
                     <Typography className={classes.userName} variant='h6'>
                         { user.result.name }
                     </Typography>
-                    <Button variant='contained' className={classes.logout} color='secondary' onClick={()=>{}}>
+                    <Button variant='contained' className={classes.logout} color='secondary' onClick={logout}>
                         Logout
                     </Button>
                 </div>):(

@@ -1,15 +1,27 @@
 import React , { useState} from 'react'
 import { Avatar, Button, Paper, Grid,Typography,Container, TextField } from '@material-ui/core'
-import Icon from './Icon';
 import { GoogleLogin} from 'react-google-login'
+import { gapi } from 'gapi-script'; // for error pop-up failed
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
+import Icon from './Icon';
 import useStyles  from './styles' ;
 import Input from './Input'; // made custom input field
+
+gapi.load('client:auth2', () => {
+    window.gapi.client.init({
+        clientId: '499565496401-hl9j161bimpggug36p506i8l5uvktm2v.apps.googleusercontent.com',
+        plugin_name: "chat"
+    })})
 
 const Auth = () => {
     const classes =useStyles() ;
     const [isSignup,setIsSignUp]= useState(false) ;
     const [ showPassword,setShowPassword]= useState(false) ;
+    const dispatch =useDispatch() ;
+    const history =useNavigate() ;
 
     const handleSubmit=()=>{}
     const handleChange=()=>{}
@@ -22,7 +34,17 @@ const Auth = () => {
     
     const googleSuccess=async(res)=>{
 
-        console.log(res) ;
+        const result=res?.profileObj ;
+        const token=res?.tokenId ;
+
+        try {
+            
+            dispatch({ type: 'AUTH' , data: { result, token}})
+            history('/') ; // redirecting to home page
+        } catch (error) {
+
+            console.log(error) ;
+        } 
     }
     const googleFailure=(error)=>{
         console.log(error) ;
