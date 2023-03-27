@@ -5,6 +5,7 @@ import { gapi } from 'gapi-script'; // for error pop-up failed
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { signin,signup } from '../../actions/auth'
 
 import Icon from './Icon';
 import useStyles  from './styles' ;
@@ -16,20 +17,44 @@ gapi.load('client:auth2', () => {
         plugin_name: "chat"
     })})
 
+const initialState={
+
+    firstName : '' ,
+    lastName: '',
+    password : '' ,
+    confirmPassword : ''
+}
+
 const Auth = () => {
     const classes =useStyles() ;
     const [isSignup,setIsSignUp]= useState(false) ;
     const [ showPassword,setShowPassword]= useState(false) ;
+    const [formData,setFormData]= useState(initialState) ;
     const dispatch =useDispatch() ;
     const history =useNavigate() ;
 
-    const handleSubmit=()=>{}
-    const handleChange=()=>{}
+
+    const handleSubmit=(e)=>{
+        
+        e.preventDefault() ;
+       
+       if(isSignup)
+       {
+            dispatch(signup(formData,history)) ; // history to navigate to something
+       }
+       else
+       {
+          dispatch(signin(formData,history)) ; 
+       }
+    }
+    const handleChange=(e)=>{
+           setFormData({...formData , [e.target.name]: e.target.value }) // change only selected one , current wli
+    }
     const handleShowPassword=()=>( setShowPassword((prevState)=> !prevState))
     const switchMode=()=>{
 
         setIsSignUp((prevState)=>!prevState) // using this we are toggling bw signup and signIn
-        handleShowPassword(false );
+        setShowPassword(false );
     }
     
     const googleSuccess=async(res)=>{
@@ -67,7 +92,7 @@ const Auth = () => {
                          
                             <Input name='firstName' label='firstName' handleChange={handleChange}  half />
                
-                            <Input name='firstName' label='firstName' handleChange={handleChange}  half />
+                            <Input name='lastName' label='lastName' handleChange={handleChange}  half />
                             
                             </>
                         )
