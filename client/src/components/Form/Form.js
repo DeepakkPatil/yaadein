@@ -24,7 +24,8 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
+    // postData.tags= postData.tags.toLowerCase() ;
     if (currentId === 0) {
       dispatch(createPost({...postData ,name: user?.result?.name  }));
       clear();

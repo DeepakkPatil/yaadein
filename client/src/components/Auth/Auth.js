@@ -14,6 +14,7 @@ import Input from './Input'; // made custom input field
 gapi.load('client:auth2', () => {
     window.gapi.client.init({
         clientId: '499565496401-hl9j161bimpggug36p506i8l5uvktm2v.apps.googleusercontent.com',
+            prompt: 'select_account',
         plugin_name: "chat"
     })})
 
@@ -37,6 +38,7 @@ const Auth = () => {
     const handleSubmit=(e)=>{
         
         e.preventDefault() ;
+        console.log("clicked") ;
        
        if(isSignup)
        {

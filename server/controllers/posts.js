@@ -27,9 +27,25 @@ export const getPost = async (req, res) => {
     }
 }
 
+export const getPostsBySearch=async(req,res)=>{
+    
+    const {searchQuery ,tags} =req.query; 
+    
+    try {
+        
+    const title= new RegExp(searchQuery,'i') ; // easier to search
+    
+    const posts = await PostMessage.find({ $or: [{title:title},{tags:{ $in: tags.split(',')}}]})
+    
+    res.json({data :posts}) ;
+    } catch (error) {
+        res.status(404).json({message: error.message})
+    }
+}
+
+
 export const createPost = async (req, res) => {
     const post = req.body;
-     console.log("checkkk22",req.userId) ;
     const newPostMessage = new PostMessage({...post , creator: req.userId  , createdAt: new Date().toISOString()})
 
     try {
@@ -67,7 +83,7 @@ export const deletePost = async (req, res) => {
 export const likePost = async (req, res) => {
     const { id } = req.params;
 
-    console.log(res) ;
+
     if(!req.userId )
     {
         return res.json({message: 'UnAuthenticated'})
