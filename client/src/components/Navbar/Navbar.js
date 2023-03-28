@@ -35,6 +35,8 @@ const Navbar = () => {
          setUser(JSON.parse(localStorage.getItem('profile')))
       }, [location]) // because if the location or url changes then user must be fetched and ui must be rendered
       
+     
+      
      return (
         <AppBar className={classes.appBar} position="static" color="inherit">
         <div className={classes.brandContainer}>
@@ -55,7 +57,8 @@ const Navbar = () => {
                         Logout
                     </Button>
                 </div>):(
-                    <Button variant='contained' color='primary' component={Link} to='/auth'>
+                    <Button component={Link} to='/auth' variant='contained' color='primary' 
+                     >
                         SignIn
                     </Button>
                 )

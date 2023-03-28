@@ -27,6 +27,7 @@ const initialState={
 }
 
 const Auth = () => {
+ console.log("asasd")
     const classes =useStyles() ;
     const [isSignup,setIsSignUp]= useState(false) ;
     const [ showPassword,setShowPassword]= useState(false) ;

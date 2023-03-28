@@ -2,15 +2,25 @@ import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE ,FETCH_POSTS_BY_SEARCH} from '.
 
 import * as api from '../api/index.js';
 
-export const getPosts = () => async (dispatch) => {
-  try {
-    const { data } = await api.fetchPosts();
+// export const getPosts = () => async (dispatch) => {
+//   try {
+//     const { data } = await api.fetchPosts();
 
+//     dispatch({ type: FETCH_ALL, payload: data });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+export const getPosts = (page) => async (dispatch) => {
+  try {
+    const { data } = await api.fetchPosts(page);
+    
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
     console.log(error.message);
   }
 };
+
 
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
