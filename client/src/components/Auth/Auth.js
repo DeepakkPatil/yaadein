@@ -27,7 +27,6 @@ const initialState={
 }
 
 const Auth = () => {
- console.log("asasd")
     const classes =useStyles() ;
     const [isSignup,setIsSignUp]= useState(false) ;
     const [ showPassword,setShowPassword]= useState(false) ;
@@ -39,8 +38,6 @@ const Auth = () => {
     const handleSubmit=(e)=>{
         
         e.preventDefault() ;
-        console.log("clicked") ;
-       
        if(isSignup)
        {
             dispatch(signup(formData,history)) ; // history to navigate to something

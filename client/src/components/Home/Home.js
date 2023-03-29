@@ -36,18 +36,16 @@ const Home = () => {
   };
 
   const handleAdd = (tag) => setTags([...tags, tag]);
-  const handleDelete = (tagToDelete) =>
-    setTags(tags.filter((tag) => tag !== tagToDelete));
+  const handleDelete = (tagToDelete) =>setTags(tags.filter((tag) => tag !== tagToDelete));
 
   // map is used to transform each element of an array into a new array of the same length. It takes a function as its argument that is applied to each element of the array, and returns a new array of the same length where each element is the result of applying the function to the corresponding element of the original array.
 // filter, on the other hand, is used to create a new array with all elements that pass a certain test. It takes a function as its argument that returns a boolean value, and returns a new array with only the elements for which the function returns true.
   
   
-  const handleSearch = (e) => { 
+  const handleSearch = () => { 
   
-  e.preventDefault();
 
-  if(search.trim() || tags)
+  if(search || tags)
   {
 
   //dispatch a search
@@ -105,9 +103,11 @@ const Home = () => {
               
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            <Paper elevation={6} className={classes.pagination} >
+            {
+              !searchQuery && !tags.length && <Paper elevation={6} className={classes.pagination} >
               <Pagination page={page} />
             </Paper>
+            }
           </Grid>
         </Grid>
       </Container>

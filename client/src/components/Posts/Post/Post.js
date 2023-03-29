@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography, ButtonBase } from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 
@@ -8,12 +8,14 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 
-import { likePost, deletePost } from '../../../actions/posts';
+import { likePost, deletePost, getPost } from '../../../actions/posts';
 import useStyles from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
+  const history= useNavigate();
   const user = JSON.parse(localStorage.getItem('profile')) ;
 
  const Likes = () => {
@@ -38,9 +40,17 @@ function truncate(input) {
    }
    return input;
 };
+
+const openPost = () => history(`/posts/${post._id}`);
+
   return (
     <Card className={classes.card} raised elevation={6}>
-      <CardMedia className={classes.media} image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.title} />
+    <ButtonBase
+        component="span"
+        name="test"
+        className={classes.cardAction}
+        onClick={openPost}
+      ><CardMedia className={classes.media} image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.title} />
       <div className={classes.overlay}>
         <Typography variant="h6">{post.name}</Typography>
         <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
@@ -59,6 +69,8 @@ function truncate(input) {
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">{ truncate(post.message)}</Typography>
       </CardContent>
+      </ButtonBase>
+      
       <CardActions className={classes.cardActions}>
         <Button size="small" color="primary" onClick={() => dispatch(likePost(post._id))} disabled={!user?.result}>
           <Likes />

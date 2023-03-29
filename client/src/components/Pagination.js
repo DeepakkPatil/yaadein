@@ -31,7 +31,6 @@ const Pagination = ({ page }) => {
       variant="outlined"
       color="primary"
       renderItem={(item) =>{ 
-        console.log(item)
       return(
         <PaginationItem {...item} component={Link} to={`/posts?page=${item.page}`} />
       )}
