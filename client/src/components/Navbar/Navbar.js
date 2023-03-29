@@ -34,7 +34,7 @@ const Navbar = () => {
          }
 
          setUser(JSON.parse(localStorage.getItem('profile')))
-      }, [location,logout,user?.token]) // because if the location or url changes then user must be fetched and ui must be rendered
+      }, [location,user?.token]) // because if the location or url changes then user must be fetched and ui must be rendered
       
      
       
