@@ -20,7 +20,7 @@ const App = () => {
           <Route path='/posts' Component={Home} />
            <Route path='/posts/search' Component={Home} />
             <Route path='/posts/:id' Component={PostDetails} />
-        <Route path='/auth' Component={()=>!user?<Auth/> : <Navigate   to='/posts' />} />
+        <Route path='/auth' Component={ !user?Auth : <Navigate   to='/posts' />} />
       </Routes>
     </Container>
     </BrowserRouter>

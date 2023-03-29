@@ -3,31 +3,30 @@ import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
   appBar: {
-    borderRadius: 15,
-    margin: '30px 0',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    height:80,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '10px 50px',
+    alignItems: 'left',
+    padding: '10px 30px',
     [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
     },
   },
-  heading: {
-    color: theme.palette.primary.main,
-    textDecoration: 'none',
-    fontSize: '2em',
-    fontWeight: 300,
-  },
   image: {
-    marginLeft: '10px',
-    marginTop: '5px',
+    marginTop: '2px',
+    padding:'5px',
+    borderRadius:'50%',
+     [theme.breakpoints.down('sm')]: {
+     width:100
+    },
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
-    width: '400px',
+    width: '30%',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
     },
@@ -35,7 +34,6 @@ export default makeStyles((theme) => ({
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '400px',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
@@ -50,6 +48,10 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
+    marginLeft:5,
+     [theme.breakpoints.down('sm')]: {
+     display: 'none',
+     }
   },
   brandContainer: {
     display: 'flex',

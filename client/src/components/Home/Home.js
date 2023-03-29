@@ -1,6 +1,6 @@
 import { Container, Grow, Grid, Paper, TextField, AppBar, Button } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Posts from '../Posts/Posts'
 import Form from '../Form/Form';
 import { getPosts, getPostsBySearch } from '../../actions/posts'
@@ -28,10 +28,20 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
 
-
   const handleKeyPress = (e) => {
     if (e.keyCode === 13) {
-      //search
+    
+  if(search || tags)
+  {
+
+  //dispatch a search
+  dispatch(getPostsBySearch({ search , tags: tags.join(',') }))
+   history(`/posts/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
+  }
+  else
+  {
+    redirect('/') ;
+  }
     }
   };
 
@@ -71,6 +81,11 @@ const Home = () => {
         >
           <Grid item xs={12} sm={7} md={9}>
             <Posts setCurrentId={setCurrentId} />
+             {
+              !searchQuery && !tags.length && <Paper elevation={6} className={classes.pagination} >
+              <Pagination page={page} />
+            </Paper>
+            }
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <AppBar
@@ -103,11 +118,7 @@ const Home = () => {
               
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            {
-              !searchQuery && !tags.length && <Paper elevation={6} className={classes.pagination} >
-              <Pagination page={page} />
-            </Paper>
-            }
+           
           </Grid>
         </Grid>
       </Container>

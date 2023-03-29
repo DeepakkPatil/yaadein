@@ -6,6 +6,8 @@ import { useParams,  useNavigate } from 'react-router-dom';
 
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import useStyles from './styles';
+import CommentSection from './CommentSection';
+
 
 const PostDetails = () => {
   
@@ -58,7 +60,7 @@ const PostDetails = () => {
           <Divider style={{ margin: '20px 0' }} />
           <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography>
           <Divider style={{ margin: '20px 0' }} />
-          <Typography variant="body1"><strong>Comments - coming soon!</strong></Typography>
+            <CommentSection post={post} />
           <Divider style={{ margin: '20px 0' }} />
         </div>
         <div className={classes.imageSection}>
@@ -70,13 +72,13 @@ const PostDetails = () => {
           <Typography gutterBottom variant="h5">You might also like:</Typography>
           <Divider />
           <div className={classes.recommendedPosts}>
-            {recommendedPosts.map(({ title, name, tags, message, likes, selectedFile, _id }) => (
-              <div style={{ margin: '20px', cursor: 'pointer' }} key={_id} onClick={()=>openPost(_id)}>
-                <Typography gutterBottom variant="h6">{title}</Typography>
-                <Typography gutterBottom variant="subtitle2">{name}</Typography>
+            {recommendedPosts.map(({ title, name,  message, likes, selectedFile, _id }) => (
+              <div style={{ margin: '20px', cursor: 'pointer' , maxWidth: '500px' , border: '0.7px solid gray' ,padding:10 ,borderRadius: 5 , display: 'flex' , flexDirection: 'column'}} key={_id} onClick={()=>openPost(_id)} >
+                <Typography gutterBottom variant="h6" >{title}</Typography>
+                <Typography gutterBottom variant="subtitle2" >{name}</Typography>
                 <Typography gutterBottom variant="subtitle2">{truncate(message)}</Typography>
                 <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
-                <img src={selectedFile} width="200px" />
+                <img src={selectedFile} width="100%"  />
               </div>
             ))}
           </div>
