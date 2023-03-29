@@ -9,7 +9,6 @@ export default makeStyles((theme) => ({
     height:80,
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
     alignItems: 'left',
     [theme.breakpoints.down('sm')]: {

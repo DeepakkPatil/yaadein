@@ -1,5 +1,5 @@
 import { AppBar, Avatar, Button, Toolbar, Typography } from '@material-ui/core'
-import { Link , useNavigate, useLocation, redirect, Navigate} from 'react-router-dom'
+import { Link , useNavigate, useLocation} from 'react-router-dom'
 import React,{useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import decode from 'jwt-decode' ;
@@ -34,7 +34,7 @@ const Navbar = () => {
          }
 
          setUser(JSON.parse(localStorage.getItem('profile')))
-      }, [location]) // because if the location or url changes then user must be fetched and ui must be rendered
+      }, [location,logout,user?.token]) // because if the location or url changes then user must be fetched and ui must be rendered
       
      
       

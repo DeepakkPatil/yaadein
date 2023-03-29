@@ -1,4 +1,4 @@
-import { AUTH, LOGOUT } from '../constants/actionTypes';
+import { AUTH } from '../constants/actionTypes';
 
 import * as api  from '../api/index.js' 
 

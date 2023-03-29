@@ -78,7 +78,7 @@ const PostDetails = () => {
                 <Typography gutterBottom variant="subtitle2" >{name}</Typography>
                 <Typography gutterBottom variant="subtitle2">{truncate(message)}</Typography>
                 <Typography gutterBottom variant="subtitle1">Likes: {likes.length}</Typography>
-                <img src={selectedFile} width="100%"  />
+                <img src={selectedFile} width="100%" alt='imgBlog'  />
               </div>
             ))}
           </div>

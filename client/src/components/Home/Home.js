@@ -1,9 +1,9 @@
 import { Container, Grow, Grid, Paper, TextField, AppBar, Button } from '@material-ui/core';
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Posts from '../Posts/Posts'
 import Form from '../Form/Form';
-import { getPosts, getPostsBySearch } from '../../actions/posts'
+import {  getPostsBySearch } from '../../actions/posts'
 import {  useLocation, redirect, useNavigate } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input' ;  
 

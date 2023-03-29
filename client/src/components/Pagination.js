@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
 import { Pagination as Pag, PaginationItem } from '@material-ui/lab';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import useStyles from './styles';
 import { useDispatch ,useSelector } from 'react-redux';
