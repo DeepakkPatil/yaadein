@@ -9,24 +9,27 @@ export default makeStyles((theme) => ({
     height:80,
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
     alignItems: 'left',
-    padding: '10px 30px',
     [theme.breakpoints.down('sm')]: {
     },
   },
   image: {
     marginTop: '2px',
-    padding:'5px',
-    borderRadius:'50%',
      [theme.breakpoints.down('sm')]: {
-     width:100
+     maxWidth:'45%',
+     height:'auto',
+     minWidth:'180px',
+     minHeight:'60px',
     },
   },
   toolbar: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    flexDirection:'column',
+    justifyContent: 'center',
     width: '30%',
+     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
     },
@@ -37,17 +40,25 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
-      marginTop: 20,
       justifyContent: 'center',
     },
   },
   logout: {
-    marginLeft: '20px',
+    right:0,
+    marginLeft:10
   },
+ logoutText: {
+  display: 'none',
+  [theme.breakpoints.up('sm')]: {
+    display: 'block',
+  },
+},
   userName: {
     display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
+    color: 'gray',
+    fontWeight: '300',
     marginLeft:5,
      [theme.breakpoints.down('sm')]: {
      display: 'none',

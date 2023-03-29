@@ -96,7 +96,7 @@ const Home = () => {
               <TextField
                 name="search"
                 variant="outlined"
-                label="Search Memories"
+                label="Search Blogs"
                 fullWidth={true}
                 value={search}
                 onChange={(e) => {

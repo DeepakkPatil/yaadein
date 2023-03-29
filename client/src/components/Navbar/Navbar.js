@@ -4,6 +4,7 @@ import React,{useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import decode from 'jwt-decode' ;
 import useStyles from './styles'
+import { FiLogOut  } from 'react-icons/fi'
 import memories from '../../images/lala.png';
 
 
@@ -51,11 +52,11 @@ const Navbar = () => {
                     <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageurl}>
                         { user.result.name.charAt(0)}
                     </Avatar>
-                    <Typography className={classes.userName} variant='h6'>
+                    <Typography className={classes.userName} >
                         { user.result.name }
                     </Typography>
                     <Button variant='contained' className={classes.logout} color='secondary' onClick={logout}>
-                        Logout
+                        <FiLogOut />&nbsp;<span className={classes.logoutText}>Logout</span>
                     </Button>
                 </div>):(
                     <Button component={Link} to='/auth' variant='contained' color='primary' 

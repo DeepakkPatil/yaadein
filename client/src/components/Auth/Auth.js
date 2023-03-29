@@ -4,7 +4,7 @@ import { GoogleLogin} from 'react-google-login'
 import { gapi } from 'gapi-script'; // for error pop-up failed
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { signin,signup } from '../../actions/auth'
 
 import Icon from './Icon';
@@ -27,13 +27,17 @@ const initialState={
 }
 
 const Auth = () => {
+
+   
     const classes =useStyles() ;
     const [isSignup,setIsSignUp]= useState(false) ;
     const [ showPassword,setShowPassword]= useState(false) ;
     const [formData,setFormData]= useState(initialState) ;
     const dispatch =useDispatch() ;
     const history =useNavigate() ;
-
+     const user = JSON.parse(localStorage.getItem('profile')) ;
+    if(user)
+      return (<Navigate to='/posts'/>) ;
 
     const handleSubmit=(e)=>{
         
