@@ -53,7 +53,7 @@
 - Sleek and responsive UI using Material UI
 - Notifications using Toastify
   
- <h3>Dependencies (install them)</h3>
+ <h3>Dependencies (install them->)</h3>
  
 ```yaml
 
