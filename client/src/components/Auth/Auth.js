@@ -4,7 +4,7 @@ import { GoogleLogin} from 'react-google-login'
 import { gapi } from 'gapi-script'; // for error pop-up failed
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useDispatch } from 'react-redux';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
   import "react-toastify/dist/ReactToastify.css";
 
