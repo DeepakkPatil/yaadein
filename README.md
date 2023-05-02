@@ -5,12 +5,12 @@
 <p align="center">
   <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" alt="translogo-Dark" width="240" />
 
-  <p align="center"> A Advanced Portfolio site created using react and sanity having information about my skills,projects etc.</p>
+  <p align="center"> "Yaadein" is a full-stack web application developed using ReactJS, Redux, MongoDB, and Google Authentication. The application is designed as a life's StoryBook where users can post details about their memories, and search for similar posts based on tags. The application provides users with various CRUD operations such as create, read, update and delete, and also enables users to like and comment on memories.</p>
   
 
 
 </p>
-
+<div></div>
 <p align="center">
     <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"> </a>
     <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"> </a>
