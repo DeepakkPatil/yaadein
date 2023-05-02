@@ -6,7 +6,6 @@ import Form from '../Form/Form';
 import {  getPostsBySearch } from '../../actions/posts'
 import {  useLocation, redirect, useNavigate } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input' ;  
-
 import useStyles from './styles.js' ;
 import Pagination from '../Pagination';
 
@@ -29,6 +28,8 @@ const Home = () => {
   const [tags, setTags] = useState([]);
 
   const handleKeyPress = (e) => {
+    
+     
     if (e.keyCode === 13) {
     
   if(search || tags)
@@ -67,7 +68,6 @@ const Home = () => {
     redirect('/') ;
   }
   }
-  
   
   return (
     <Grow in>

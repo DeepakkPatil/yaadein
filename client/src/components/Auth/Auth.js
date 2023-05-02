@@ -4,6 +4,10 @@ import { GoogleLogin} from 'react-google-login'
 import { gapi } from 'gapi-script'; // for error pop-up failed
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useDispatch } from 'react-redux';
+import { toast, ToastContainer } from 'react-toastify';
+
+  import "react-toastify/dist/ReactToastify.css";
+
 import { Navigate, useNavigate } from 'react-router-dom';
 import { signin,signup } from '../../actions/auth'
 
@@ -69,14 +73,37 @@ const Auth = () => {
         try {
             
             dispatch({ type: 'AUTH' , data: { result, token}})
+            toast.success('🦄 Google signin Successfull', {
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
             history('/') ; // redirecting to home page
         } catch (error) {
-
+        toast.error('🦄  signin Unsuccessfull. Try again Later!', {
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
             console.log(error) ;
         } 
     }
     const googleFailure=(error)=>{
         console.log(error) ;
+         toast.error('🦄 Google signin Unsuccessfull. Try again Later!', {
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
         console.log("Google signin Unsuccessfull. Try again Later")
     }
     

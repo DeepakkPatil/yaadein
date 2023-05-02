@@ -41,7 +41,16 @@ function truncate(input) {
    return input;
 };
 
-const openPost = () => history(`/posts/${post._id}`);
+const openPost = (e) =>{ 
+if(!(e.target.id))
+return history(`/posts/${post._id}`)
+
+if(e.target.id==='detail')
+{
+ setCurrentId(post._id) ;
+}
+
+};
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -56,9 +65,9 @@ const openPost = () => history(`/posts/${post._id}`);
         <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
       </div>
        {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
-      <div className={classes.overlay2}>
-        <Button onClick={() => setCurrentId(post._id)} style={{ color: 'white' }} size="small">
-          <MoreHorizIcon fontSize="default" />
+      <div className={`${classes.overlay2} detail`} id='detail'>
+        <Button style={{ color: 'white' }} size="small"  id='detail'>
+          <MoreHorizIcon fontSize="default"  id='detail'  />
         </Button>
       </div>
       )}

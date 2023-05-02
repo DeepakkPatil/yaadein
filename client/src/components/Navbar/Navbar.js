@@ -6,6 +6,7 @@ import decode from 'jwt-decode' ;
 import useStyles from './styles'
 import { FiLogOut  } from 'react-icons/fi'
 import memories from '../../images/lala.png';
+import {toast} from 'react-toastify'
 
 
 const Navbar = () => {
@@ -18,6 +19,16 @@ const Navbar = () => {
       const logout=()=>{
 
         dispatch({ type:'LOGOUT'}) ;
+        toast.success('🦄 logged Out!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+});
         history('/') ;
         setUser(null) ;
       }
