@@ -7,7 +7,7 @@ import useStyles from './styles'
 import { FiLogOut  } from 'react-icons/fi'
 import memories from '../../images/lala.png';
 import {toast} from 'react-toastify'
-
+import { BsFillPostcardHeartFill } from 'react-icons/bs'
 
 const Navbar = () => {
 
@@ -16,6 +16,8 @@ const Navbar = () => {
       const dispatch=useDispatch() ;
       const history = useNavigate() ;
     const location = useLocation() ;
+  
+    
       const logout=()=>{
 
         dispatch({ type:'LOGOUT'}) ;
@@ -45,6 +47,8 @@ theme: "light",
          }
 
          setUser(JSON.parse(localStorage.getItem('profile')))
+         
+         
       }, [location,user?.token]) // because if the location or url changes then user must be fetched and ui must be rendered
       
      
@@ -55,6 +59,11 @@ theme: "light",
         <Link to='/'>
         <img className={classes.image} src={memories} alt="icon" height="70"  />
         </Link>
+          { user && <Button  component={Link} to='/allposts' variant='outlined' color='primary' hint='your posts' >
+          <BsFillPostcardHeartFill style={{fontSize :'1rem'}}/>
+          <span className={classes.logoutText}>Posts</span>
+          </Button>
+          }
         </div>
         <Toolbar className={classes.toolbar}>
             {
@@ -74,7 +83,9 @@ theme: "light",
                      >
                         SignIn
                     </Button>
+                    
                 )
+                
             }
         </Toolbar>
       </AppBar>

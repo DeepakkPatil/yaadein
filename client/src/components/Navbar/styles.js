@@ -63,6 +63,17 @@ export default makeStyles((theme) => ({
      display: 'none',
      }
   },
+   yourPosts: {
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    color: 'gray',
+    fontWeight: '300',
+    marginLeft:5,
+     [theme.breakpoints.down('sm')]: {
+     display: 'none',
+     }
+  },
   brandContainer: {
     display: 'flex',
     alignItems: 'center',

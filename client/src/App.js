@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 import PostDetails from './components/PostDetails/PostDetails';
+import Allpost from './components/AllpostsUser/Allpost';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
            <Route path='/posts/search' Component={Home} />
             <Route path='/posts/:id' Component={PostDetails} />
             <Route path='/auth' Component={Auth} />
+            <Route path='/allposts' Component={Allpost} />
       </Routes>
     </Container>
     </BrowserRouter>
