@@ -5,6 +5,7 @@ import * as api from '../../api/flaskapi'
 import gif from '../../constants/giphy.webp'
 import happy from '../../constants/happy.gif'
 import { Example } from "../Carousel";
+import axios from "axios";
 
 const Allpost = () => {
   
@@ -16,11 +17,15 @@ const user = JSON.parse(localStorage.getItem('profile')) ;
       useEffect(() => {
     async function fetchData() {
       try {
-        const {data} = await api.fetchSentiment({ userId: (user?.result?._id || user?.result?.googleId)});
+    
+      const uID={ "userId": (user?.result?._id || user?.result?.googleId)} ;
+        const {data} = await api.fetchSentiment(uID);
         setYourPost(data);
       } catch (error) {
         console.error(error);
       }
+      
+
     }
 
     fetchData();
@@ -43,8 +48,8 @@ const user = JSON.parse(localStorage.getItem('profile')) ;
        <Grid className={classes.container} container alignItems="stretch" spacing={3}>
         {
         
-        arr[1].length>0 && arr[1].map((post)=>(<>
-           <Grid key={post?._id} item xs={12} sm={12} md={6}  lg={4}  >
+        arr[1].length>0 && arr[1].map((post)=>(
+           <Grid key={post._id} item xs={12} sm={12} md={6}  lg={4}  >
             <Card  raised elevation={6} >
      <ButtonBase
          component="span"
@@ -63,8 +68,7 @@ const user = JSON.parse(localStorage.getItem('profile')) ;
       
      
    </Card>
-         </Grid>
-        </>))
+         </Grid>))
         }
     
       </Grid>
