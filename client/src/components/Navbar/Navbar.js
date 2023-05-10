@@ -92,4 +92,4 @@ theme: "light",
   )
 }
 
-export default Navbar
+export  {Navbar}

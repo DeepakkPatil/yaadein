@@ -17,6 +17,7 @@ import ChipInput from "material-ui-chip-input";
 import useStyles from "./styles.js";
 import Pagination from "../Pagination";
 import Trends from "../trends/Trends";
+import { ChatBotButton } from "../Chat/ChatBotButton";
 
 function useQuery() {
 	const url = new URLSearchParams(useLocation().search);
@@ -124,7 +125,10 @@ const Home = () => {
 				</Grid>
 
 				<Trends />
+			
+			<ChatBotButton />
 			</Container>
+		
 		</Grow>
 	);
 };
