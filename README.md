@@ -2,7 +2,7 @@
 
 <h2><a href="https://life-storybook.netlify.app">Deployed App Link</a></h2>
 <h6><a href="https://github.com/DeepakkPatil/flaskbackend-yaadein">Flask Backend</a></h6>
-<h6><a href="">Sanity CMS backend </a></h6>
+<h6><a href="https://github.com/DeepakkPatil/sanity-yaadein">Sanity CMS backend </a></h6>
 
 <p align="center">
   <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" alt="translogo-Dark" width="240" />
