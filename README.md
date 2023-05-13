@@ -44,6 +44,7 @@
 - The images of users are stored in Sanity CMS.
 - Users can view their personal vault where they can upload a random selfie. It won't be public.
 - The sentiment analysis is performed using VaderSentiment, and the quotes suggested are from Unsplash.
+- "Yaadein" also features a chat bot called "TravelTalk" built using Botpress. Users can interact with the bot to obtain information about different places in a concise and simple manner. The chat bot feature enhances the user experience by providing an additional way to obtain information and explore new places
 - The app uses Material UI for a sleek and responsive UI, and Toastify for notifications.
 - Dependencies: npm i material-ui@latest, npm i react-tostify, npm i gapi-script, npm i react-redux, npm i react-router-dom, npm i jwt-decode, npm i axios, Flask, pymongo.
 - The app is deployed on Vercel and Netlify.
