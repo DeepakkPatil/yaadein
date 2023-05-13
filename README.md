@@ -1,18 +1,21 @@
 # Yaadein : A life's ScrapBook
 
 <h2><a href="https://life-storybook.netlify.app">Deployed App Link</a></h2>
+<h6><a href="https://github.com/DeepakkPatil/flaskbackend-yaadein">Flask Backend</a></h6>
+<h6><a href="">Sanity CMS backend </a></h6>
 
 <p align="center">
   <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" alt="translogo-Dark" width="240" />
 
-<p align="justify"> <b>"life's ScrapBook" </b> is a full-stack web application developed using ReactJS, Redux, MongoDB, and Google Authentication, with an added Flask backend. The application is designed to serve as a life's StoryBook, where users can create, edit, and share stories/memories, and search for similar posts based on tags.<br /><br />
-The app provides authentication and authorization mechanisms to ensure secure user access. The Flask backend enhances the application by providing trending posts and creators based on likes, and complete sentiment analysis of all posts sent by the user, with suggestions for quotes and actionables. <br /> <br />
-Additionally, the app includes a new feature where users can upload a random selfie to their personal vault, and the face-api is used to recognize the user's facial expression. Based on the average mood of the user in a week, the app suggests some activities and quotes. The user's images are stored in the Sanity CMS, ensuring secure and reliable storage of user data."</p>
+<p align="justify"> <b> ⭐"life's ScrapBook" </b> is a full-stack web application developed using ReactJS, Redux, MongoDB, and Google Authentication, with an added Flask backend. The application is designed to serve as a life's StoryBook, where users can create, edit, and share stories/memories, and search for similar posts based on tags.<br /><br />
+⭐ The app provides authentication and authorization mechanisms to ensure secure user access. The Flask backend enhances the application by providing trending posts and creators based on likes, and complete sentiment analysis of all posts sent by the user, with suggestions for quotes and actionables. <br /> <br />
+⭐ Additionally, the app includes a new feature where users can upload a random selfie to their personal vault, and the face-api is used to recognize the user's facial expression. Based on the average mood of the user in a week, the app suggests some activities and quotes. The user's images are stored in the Sanity CMS, ensuring secure and reliable storage of user data."</p>
   
 
 
 </p>
-<div></div>
+
+<br /> 
 <p align="center">
     <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"> </a>
     <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"> </a>
@@ -23,7 +26,7 @@ Additionally, the app includes a new feature where users can upload a random sel
      
 </p>
 
-
+<hr />
 <h2>Functionality: </h2>
 
 - Yaadein is a full-stack website built with React and a MongoDB backend that allows users to create and share stories/memories.
