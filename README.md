@@ -48,6 +48,7 @@ Additionally, the app includes a new feature where users can upload a random sel
 ![image](https://github.com/DeepakkPatil/yaadein/assets/108725514/c5274f75-ed71-42c8-bd36-52a61e665276)
 
 
+
 <h2> Tech Stack: </h2>
 
 - Front-end: React, Redux, Material UI, Toastify
@@ -87,7 +88,19 @@ pip install face-api
 
 <!-- ![WhatsApp Image 2023-05-13 at 8 25 15 AM](https://github.com/DeepakkPatil/yaadein/assets/108725514/6115dbb9-b5e4-4044-b054-4e1483e5264e) -->
 
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/108725514/238108731-6115dbb9-b5e4-4044-b054-4e1483e5264e.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230513T025959Z&X-Amz-Expires=300&X-Amz-Signature=9df0c6e96e3abcbd1868a3a28221174ea32ad3ba1fbd4be8bf123641b4df36fc&X-Amz-SignedHeaders=host&actor_id=108725514&key_id=0&repo_id=619127856" alt="image description" style="width: 400px;">
+
+
+
+
+<table>
+  <tr>
+    <td><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/108725514/238108731-6115dbb9-b5e4-4044-b054-4e1483e5264e.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230513T025959Z&X-Amz-Expires=300&X-Amz-Signature=9df0c6e96e3abcbd1868a3a28221174ea32ad3ba1fbd4be8bf123641b4df36fc&X-Amz-SignedHeaders=host&actor_id=108725514&key_id=0&repo_id=619127856" alt="image description" style="width: 400px;">
+</td>
+    <td><img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/585650fc-6717-4222-8502-316e7af8f804"  style="width: 400px;" />
+</td>
+  </tr>
+</table>
+
 
 - A personal vault will be created for each user, where they can upload their own selfie images. The uploaded images will be stored securely in sanity CMS and will not be made public to other users.
 - The uploaded images will be processed using face-api, a JavaScript library for face detection and recognition. Specifically, we will use face-api to recognize the user's face-expression from the uploaded image.
