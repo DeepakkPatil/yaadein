@@ -98,7 +98,7 @@ pip install face-api
 
 <table>
   <tr>
-    <td><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/108725514/238108731-6115dbb9-b5e4-4044-b054-4e1483e5264e.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230513T025959Z&X-Amz-Expires=300&X-Amz-Signature=9df0c6e96e3abcbd1868a3a28221174ea32ad3ba1fbd4be8bf123641b4df36fc&X-Amz-SignedHeaders=host&actor_id=108725514&key_id=0&repo_id=619127856" alt="image description" style="width: 400px;">
+    <td><img src="https://i.ibb.co/NsYc1QJ/face-Recog.jpg" alt="image description" style="width: 400px;">
 </td>
     <td><img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/585650fc-6717-4222-8502-316e7af8f804"  style="width: 400px;" />
 </td>
