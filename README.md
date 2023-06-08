@@ -112,9 +112,11 @@ pip install face-api
 
 <p align="center">
   
-<img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/fb4f6024-73de-4e90-a4fa-470013b1efc9" />
+<img src="https://i.ibb.co/JC4cQ0m/d1.png" />
 
-<img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/30909447-a9f8-454b-a5e6-d2de3c494720" />
+  - Analysis on Posts and Recommmendation of quotes for motivation.
+ 
+<img src="https://i.ibb.co/2krmMBV/d2.png" />
 </p>
 
 - Sentiment analysis on the comments of the posts is done to seek feedback from the users
