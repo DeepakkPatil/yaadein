@@ -96,9 +96,9 @@ pip install face-api
 
 <p align="center" >
  
-  <img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/e0868f50-7c3e-4776-a948-4e268d28c01a" width="200"/>
+  <img src="https://i.ibb.co/xhr3Jx4/Face-Recog.jpg" width="200"/>
   
-  <img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/585650fc-6717-4222-8502-316e7af8f804" width="200"/>
+  <img src="https://i.ibb.co/VqzFCD9/one.png" width="200"/>
 </p>
 
 
