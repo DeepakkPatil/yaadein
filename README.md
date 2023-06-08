@@ -49,7 +49,7 @@
 - Dependencies: npm i material-ui@latest, npm i react-tostify, npm i gapi-script, npm i react-redux, npm i react-router-dom, npm i jwt-decode, npm i axios, Flask, pymongo.
 - The app is deployed on Vercel and Netlify.
 
-![image](https://github.com/DeepakkPatil/yaadein/assets/108725514/c5274f75-ed71-42c8-bd36-52a61e665276)
+<img src="https://i.ibb.co/rtR6hC3/final-Yaadein.png" />
 
 
 
@@ -90,20 +90,16 @@ pip install face-api
 
 <h2>For Face Expression Recognition</h2>
 
-<!-- ![WhatsApp Image 2023-05-13 at 8 25 15 AM](https://github.com/DeepakkPatil/yaadein/assets/108725514/6115dbb9-b5e4-4044-b054-4e1483e5264e) -->
 
 
 
 
-
-<table>
-  <tr>
-    <td><img src="https://i.ibb.co/NsYc1QJ/face-Recog.jpg" alt="image description" style="width: 400px;">
-</td>
-    <td><img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/585650fc-6717-4222-8502-316e7af8f804"  style="width: 400px;" />
-</td>
-  </tr>
-</table>
+<p align="center" >
+ 
+  <img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/e0868f50-7c3e-4776-a948-4e268d28c01a" width="200"/>
+  
+  <img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/585650fc-6717-4222-8502-316e7af8f804" width="200"/>
+</p>
 
 
 - A personal vault will be created for each user, where they can upload their own selfie images. The uploaded images will be stored securely in sanity CMS and will not be made public to other users.
@@ -112,7 +108,16 @@ pip install face-api
 - Based on the average mood of the user during the week, we will suggest some relevant activities and quotes. This will involve analyzing the user's mood data and matching it with predefined activity and quote data, which will be stored in our system.
 
 
+<h2>For Sentiment Analysis and Motivation </h2>
 
+<p align="center">
+  
+<img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/fb4f6024-73de-4e90-a4fa-470013b1efc9" />
 
+<img src="https://github.com/DeepakkPatil/yaadein/assets/108725514/30909447-a9f8-454b-a5e6-d2de3c494720" />
+</p>
+
+- Sentiment analysis on the comments of the posts is done to seek feedback from the users
+- On the basis of this Quotes are shared to the user for keeping him motivated.
 
 
