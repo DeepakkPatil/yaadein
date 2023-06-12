@@ -18,7 +18,7 @@ const ChatBotButton = () => {
   const history = useNavigate();
 
   const handleClick = () => {
-    history('/check');
+    history('/bot');
   };
 
   return (<>

@@ -6,13 +6,12 @@ export default makeStyles((theme) => ({
     position: 'fixed',
     top: 0,
     left: 0,
+    backgroundColor:"white",
     height:80,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'left',
-    [theme.breakpoints.down('sm')]: {
-    },
   },
   image: {
     marginTop: '2px',
@@ -23,16 +22,7 @@ export default makeStyles((theme) => ({
      minHeight:'60px',
     },
   },
-  toolbar: {
-    display: 'flex',
-    flexDirection:'column',
-    justifyContent: 'center',
-    width: '30%',
-     alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      width: 'auto',
-    },
-  },
+  
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
