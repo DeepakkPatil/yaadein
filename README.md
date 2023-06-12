@@ -7,10 +7,12 @@
 <p align="center">
   <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" alt="translogo-Dark" width="240" />
 
+
 <p align="justify"> <b> ⭐"life's StoryBook" </b> is a full-stack web application developed using ReactJS, Redux, MongoDB, and Google Authentication, with an added Flask backend. The application is designed to serve as a life's StoryBook, where users can create, edit, and share stories/memories, and search for similar posts based on tags.<br /><br />
 ⭐ The app provides authentication and authorization mechanisms to ensure secure user access. The Flask backend enhances the application by providing trending posts and creators based on likes, and complete sentiment analysis of all posts sent by the user, with suggestions for quotes and actionables. <br /> <br />
 ⭐ Additionally, the app includes a new feature where users can upload a random selfie to their personal vault, and the face-api is used to recognize the user's facial expression. Based on the average mood of the user in a week, the app suggests some activities and quotes. The user's images are stored in the Sanity CMS, ensuring secure and reliable storage of user data."</p>
   
+
 
 
 </p>

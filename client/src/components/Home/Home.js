@@ -6,17 +6,20 @@ import {
 	TextField,
 	AppBar,
 	Button,
+	Typography,
+	Card,
 } from "@material-ui/core";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
 import { getPostsBySearch } from "../../actions/posts";
-import { useLocation, redirect, useNavigate } from "react-router-dom";
+import { useLocation, redirect, useNavigate ,Link } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
 import useStyles from "./styles.js";
 import Pagination from "../Pagination";
 import Trends from "../trends/Trends";
+import { ChatBotButton } from "../Chat/ChatBotButton";
 
 function useQuery() {
 	const url = new URLSearchParams(useLocation().search);
@@ -33,8 +36,7 @@ const Home = () => {
 	const classes = useStyles();
 	const [search, setSearch] = useState("");
 	const [tags, setTags] = useState([]);
-	const rajRef = useRef(null);
-	
+
 	const handleKeyPress = (e) => {
 		if (e.keyCode === 13) {
 			if (search || tags) {
@@ -52,9 +54,6 @@ const Home = () => {
 	const handleAdd = (tag) => setTags([...tags, tag]);
 	const handleDelete = (tagToDelete) =>
 		setTags(tags.filter((tag) => tag !== tagToDelete));
-
-	// map is used to transform each element of an array into a new array of the same length. It takes a function as its argument that is applied to each element of the array, and returns a new array of the same length where each element is the result of applying the function to the corresponding element of the original array.
-	// filter, on the other hand, is used to create a new array with all elements that pass a certain test. It takes a function as its argument that returns a boolean value, and returns a new array with only the elements for which the function returns true.
 
 	const handleSearch = () => {
 		if (search || tags) {
@@ -87,6 +86,16 @@ const Home = () => {
 						)}
 					</Grid>
 					<Grid item xs={12} sm={6} md={3}>
+						<Card
+							item
+							xs={12}
+							sm={6}
+							md={3}
+							style={{ padding: 10, marginBottom: 10 }}
+						>
+							<Button  component={Link} to='/check' variant='outlined' color='primary' hint='Your expressions'  fullWidth>Your Vault 🪞</Button>
+							
+						</Card>
 						<AppBar
 							className={classes.appBarSearch}
 							position="static"
@@ -124,6 +133,8 @@ const Home = () => {
 				</Grid>
 
 				<Trends />
+
+				<ChatBotButton />
 			</Container>
 		</Grow>
 	);
