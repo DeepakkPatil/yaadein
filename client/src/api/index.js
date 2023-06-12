@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API= axios.create({ baseURL: 'https://yaadein-lifestorybook.vercel.app/'}) ;
+const API= axios.create({ baseURL: PROCESS.env.YAADEIN_ID}) ;
 
 
 API.interceptors.request.use((req) => {
