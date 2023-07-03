@@ -172,7 +172,9 @@ fetchData();
     (<Button variant="contained" onClick={()=>{  const stream = videoRef.current.srcObject;
   const tracks = stream?.getTracks();
   tracks?.forEach(track => track.stop());
-  videoRef.current.srcObject = null;}}>Stop Camera</Button>)}
+  videoRef.current.srcObject = null;
+  setCamOpen(false) ;
+  }}>Stop Camera</Button>)}
      
       { isCamOpen &&<Grid container spacing={2}>
   <Grid item xs={12} sm={6} style={{ display: 'flex', flexDirection:'column', justifyContent: 'center'}}>

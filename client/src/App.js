@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { AppBar, Box, Button, Container, IconButton, Toolbar, Typography } from '@material-ui/core';
 
 import { BrowserRouter ,Route,Routes , Navigate } from 'react-router-dom';
 import React from 'react';
@@ -14,9 +14,30 @@ const App = () => {
  
   
   return (
+    	<>
       <BrowserRouter>
     <Container maxWidth="xl">
-      <Nav />
+       {/* <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+      
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box> */}
+     
+     <Nav />
       <Routes>
         <Route path='/' Component={()=> <Navigate   to='/posts' />}/> 
           <Route path='/posts' Component={Home} />
@@ -24,12 +45,16 @@ const App = () => {
             <Route path='/posts/:id' Component={PostDetails} />
             <Route path='/auth' Component={Auth} />
             <Route path='/allposts' Component={Allpost} />
-            <Route path='/bot' Component={BotpressBot} />
+            {/* <Route path='/bot' Component={BotpressBot} /> */}
             <Route path='/check' Component={Expression} />
             
       </Routes>
     </Container>
     </BrowserRouter>
+    <div >
+    	<BotpressBot />
+    </div>
+    	</>
   );
 };
 

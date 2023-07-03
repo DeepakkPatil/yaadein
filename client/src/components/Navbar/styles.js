@@ -3,9 +3,10 @@ import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
   appBar: {
-    position: 'fixed',
+    position: 'static',
     top: 0,
     left: 0,
+    marginBottom: '20px',
     backgroundColor:"white",
     height:80,
     display: 'flex',
