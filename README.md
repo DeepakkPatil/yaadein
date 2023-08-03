@@ -3,7 +3,7 @@
 <h2><a href="https://life-storybook.netlify.app">Deployed App Link</a></h2>
 
 <p align="center">
-  <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" alt="translogo-Dark" width="240" />
+
 
   <p align="center"> "Yaadein" is a full-stack web application developed using ReactJS, Redux, MongoDB, and Google Authentication. The application is designed as a life's StoryBook where users can post details about their memories, and search for similar posts based on tags. The application provides users with various CRUD operations such as create, read, update and delete, and also enables users to like and comment on memories.</p>
 
