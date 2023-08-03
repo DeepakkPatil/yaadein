@@ -94,7 +94,7 @@ const Home = () => {
 							md={3}
 							style={{ padding: 10, marginBottom: 10 }}
 						>
-							<Button  component={Link} to='/check' variant='outlined' color='primary' hint='Your expressions'  fullWidth>Your Vault 🪞</Button>
+							<Button  component={Link} to='/allposts' variant='outlined' color='primary' hint='Your Posts'  fullWidth>All Posts 🪞</Button>
 							
 						</Card>
 						<AppBar

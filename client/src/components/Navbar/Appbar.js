@@ -17,7 +17,7 @@ import memories from "../../images/lala.png";
 import { toast } from "react-toastify";
 import { BsFillPostcardHeartFill } from "react-icons/bs";
 
-const pages = ["All Posts", "Your Vault", "Chatbot"];
+const pages = ["All Posts"];
 const settings = ["Logout"];
 
 function Nav() {
@@ -131,17 +131,7 @@ function Nav() {
 									All Posts
 								</Typography>
 							</MenuItem>
-							<MenuItem onClick={handleCloseNavMenu}>
-								<Typography
-									component={Link}
-									to="/check"
-									variant="outlined"
-									color="primary"
-									style={{ textDecoration: "none" }}
-								>
-									Your Vault
-								</Typography>
-							</MenuItem>
+				
 							<MenuItem onClick={handleCloseNavMenu}>
 								<Typography
 									component={Link}
@@ -165,15 +155,7 @@ function Nav() {
 						>
 							All Posts
 						</Button>
-						<Button
-							component={Link}
-							to="/check"
-							style={{ textDecoration: "none" }}
-							sx={{ my: 2, color: "white", display: "block" }}
-						>
-							Your Vault
-						</Button>
-					
+											
 					</Box>
 
 					<Box sx={{ flexGrow: 0 }}>
